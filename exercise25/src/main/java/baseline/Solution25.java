@@ -12,8 +12,10 @@ import java.util.Set;
 
 public class Solution25 {
     public static int passwordValidator(String input) {
-
-        // Checking lower alphabet in string
+        
+        /*
+        using the parameters given, determine the strength of the password
+        */
 
         int n = input.length();
         int result;
@@ -49,6 +51,12 @@ public class Solution25 {
 
     public static void main(String[] args)
     {
+        /*
+        prompt user to input the password
+        use a function to determine the strength
+        print the strength of the password
+        */
+
         String input;
         String result;
         int check;
