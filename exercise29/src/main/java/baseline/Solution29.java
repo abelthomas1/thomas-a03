@@ -17,6 +17,34 @@ public class Solution29 {
         print the result
          */
 
+        Scanner inp = new Scanner(System.in);
+        int num = 0;
+        String input = "";
+        String exit = "exit";
+        boolean isStringNumber = true;
+
+        while(true){
+
+            System.out.println("What is the rate of return? ");
+            input = inp.next();
+
+            if(input.equalsIgnoreCase(exit)){break;}
+
+            isStringNumber = input.matches("[1-9]+");
+
+            if(!isStringNumber){
+                System.out.println("Sorry. That's not a valid input.");
+            }else{
+                num = Integer.parseInt(input);
+
+                int years = 72 / num;
+
+                System.out.println("It will take " + years + " years to double your initial investment.");
+                break;
+            }
+
+        }
+
     }
 }
 
