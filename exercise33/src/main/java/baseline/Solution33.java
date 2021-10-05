@@ -15,5 +15,21 @@ public class Solution33 {
         display either "Yes," "No," "Maybe," or "Ask again later"
          */
 
+        String[] responses = new String[]{"Yes", "No", "Maybe", "Ask again later"};
+
+        Scanner sc = new Scanner(System.in);
+        String que;
+
+        System.out.print("What's your question?\n > ");
+        que = sc.nextLine();
+
+        System.out.println();
+
+
+        Random rand = new Random();
+        int v = rand.nextInt(4);
+
+        System.out.println(responses[v]);
+
     }
 }
