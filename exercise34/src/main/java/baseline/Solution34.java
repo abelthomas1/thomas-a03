@@ -8,7 +8,14 @@ package baseline;
 import java.util.*;
 
 public class Solution34 {
-    public static void main(String[] args) {
+
+    void removeName(ArrayList names, String del)
+    {
+        names.remove(del);
+    }
+
+    public static void main(String []args)
+    {
 
         /*
         print a list of names
@@ -16,5 +23,26 @@ public class Solution34 {
         print the list again with the selected name removed
          */
 
+
+        Solution34 obj=new Solution34();
+
+        ArrayList<String> names=new ArrayList();
+        names.add("John Smith");
+        names.add("Jackie Jackson");
+        names.add("Chris Jones");
+        names.add("Amanda Cullen");
+        names.add("Jeremy Goodwin");
+        Scanner sc=new Scanner(System.in);
+
+        for (int i = 0; i < 5; i++) {
+            System.out.println(names.get(i));
+        }
+
+        System.out.println("\nEnter an employee name to remove: ");
+        String del=sc.nextLine();
+        obj.removeName(names,del);
+
+
+        System.out.println("\n" + names);
     }
 }
